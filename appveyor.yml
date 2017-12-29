@@ -3,6 +3,8 @@ environment:
   LANG: en_US.UTF-8
 
 install:
+  - set LC_ALL=en_US.UTF-8
+  - set LANG=en_US.UTF-8
   - set PATH=C:\Ruby24-x64\bin;%PATH%
   - bundle install
 
