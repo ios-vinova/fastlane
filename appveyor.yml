@@ -4,7 +4,6 @@ environment:
 
 init:
   - git config --global core.autocrlf true
-  - mkdir /tmp/
 
 install:
   - echo %LC_ALL%
@@ -13,6 +12,9 @@ install:
   - set PATH=C:\Ruby24-x64\bin;%PATH%
   - bundle install
   - echo %LC_ALL%
+
+build_script:
+  - IF NOT EXIST C:\tmp MKDIR C:\tmp
 
 build: off
 
