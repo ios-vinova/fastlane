@@ -3,10 +3,12 @@ environment:
   LANG: en_US.UTF-8
 
 install:
+  - echo %LC_ALL%
   - set LC_ALL=en_US.UTF-8
   - set LANG=en_US.UTF-8
   - set PATH=C:\Ruby24-x64\bin;%PATH%
   - bundle install
+  - echo %LC_ALL%
 
 build: off
 
@@ -16,4 +18,4 @@ before_test:
   - bundle -v
 
 test_script:
-  - bundle exec fastlane test
+  - bundle exec fastlane test --verbose
