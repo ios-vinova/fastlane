@@ -13,15 +13,13 @@ install:
   - bundle install
   - echo %LC_ALL%
 
-build_script:
-  - IF NOT EXIST C:\tmp MKDIR C:\tmp
-
 build: off
 
 before_test:
   - ruby -v
   - gem -v
   - bundle -v
+  - IF NOT EXIST C:\tmp MKDIR C:\tmp
 
 test_script:
   - bundle exec fastlane test --verbose
