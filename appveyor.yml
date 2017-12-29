@@ -2,6 +2,9 @@ environment:
   LC_ALL: en_US.UTF-8
   LANG: en_US.UTF-8
 
+init:
+  - git config --global core.autocrlf true
+
 install:
   - echo %LC_ALL%
   - set LC_ALL=en_US.UTF-8
