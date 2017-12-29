@@ -4,6 +4,7 @@ environment:
 
 init:
   - git config --global core.autocrlf true
+  - mkdir /tmp/
 
 install:
   - echo %LC_ALL%
