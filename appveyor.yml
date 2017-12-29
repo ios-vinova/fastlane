@@ -22,4 +22,4 @@ before_test:
   - IF NOT EXIST C:\tmp MKDIR C:\tmp
 
 test_script:
-  - bundle exec fastlane test --verbose
+  - bundle exec fastlane test
